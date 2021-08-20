@@ -32,8 +32,8 @@ function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">{t("opening.title")}</h1>
-            <p className="text-xl text-gray-600">{t("opening.description")}</p>
+            <h1 className="h2 mb-4">{t("openings.title")}</h1>
+            <p className="text-xl text-gray-600">{t("openings.description")}</p>
           </div>
 
           {/* Section content */}
