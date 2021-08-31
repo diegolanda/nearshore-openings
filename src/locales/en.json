@@ -51,6 +51,15 @@
     "signin": "Sign in",
     "view": "View",
     "apply": "Apply",
-    "close":"Close"
+    "close":"Close",
+    "search":"Search..."
+  },
+  "viewModal":{
+    "dateCreated":"Date Created",
+    "desiredCriteria":"Desired Criteria",
+    "jobDescription":"Job Description",
+    "mainSkill":"Main Skill",
+    "seniority":"Seniority"
+
   }
 }

@@ -112,7 +112,7 @@ function Features() {
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               value={search}
-              placeholder="Search..."
+              placeholder={t('actions.search')}
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>

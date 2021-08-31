@@ -8,7 +8,7 @@ const CustomModal = ({ showModal, handleModal, data }) => {
       {showModal ? (
         <>
           <div className="overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-5 mx-auto max-w-6xl">
+            <div className="relative w-auto my-5 mx-auto max-w-4xl">
               {/*content*/}
               <div className="border-8 border-green-500 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
@@ -20,24 +20,26 @@ const CustomModal = ({ showModal, handleModal, data }) => {
                 {/*body*/}
                 <div className="relative p-5 flex-auto">
                   <p className="my-0 text-blueGray-500 text-lg leading-relaxed text-left text-justify  ">
-                    <h4 white-space break-spaces>
-                      <strong>- Date Created:</strong> {data.DateCreated}
-                    </h4>
-                    <h4 white-space break-spaces>
-                      <strong>- Desired Criteria:</strong>{' '}
+                    <div>
+                      <strong>- {t('viewModal.dateCreated')}: </strong>
+                      {data.DateCreated}
+                    </div>
+                    <div>
+                      <strong>- {t('viewModal.desiredCriteria')}: </strong>
                       {data.DesiredCriteria}
-                    </h4>
-                    <h4 white-space break-spaces>
-                      <strong>- Job Description:</strong> {data.JobDescription}
-                    </h4>
-                    <h4 white-space break-spaces>
-                      <strong>- Main Skill: </strong>
+                    </div>
+                    <div style={{ whiteSpace: 'break-spaces' }}>
+                      <strong>- {t('viewModal.jobDescription')}: </strong><br />
+                      {data.JobDescription}
+                    </div>
+                    <div>
+                      <strong>- {t('viewModal.mainSkill')}: </strong>
                       {data.MainSkill}
-                    </h4>
-                    <h4 white-space break-spaces>
-                      <strong>- Seniority: </strong>
+                    </div>
+                    <div>
+                      <strong>- {t('viewModal.seniority')}: </strong>
                       {data.Seniority}
-                    </h4>
+                    </div>
                   </p>
                 </div>
                 {/*footer*/}
