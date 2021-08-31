@@ -40,13 +40,26 @@
   "openings": {
     "title": "OPEN POSITIONS",
     "short_description": "Be the next top notch engineer and show what Nearshore is about",
-    "description": " Search over our 103 open positions!, have something else in mind? sends us an email at careers@nearshorecode.com"
+    "descriptionFirstPart": "Search over our",
+    "descriptionSecondPart": "open positions!, have something else in mind? sends us an email at careers@nearshorecode.com"
   },
   "actions": {
     "seeOpenings": {
       "label": "See Openings"
     },
     "signup": "Sign up",
-    "signin": "Sign in"
+    "signin": "Sign in",
+    "view": "View",
+    "apply": "Apply",
+    "close":"Close",
+    "search":"Search..."
+  },
+  "viewModal":{
+    "dateCreated":"Date Created",
+    "desiredCriteria":"Desired Criteria",
+    "jobDescription":"Job Description",
+    "mainSkill":"Main Skill",
+    "seniority":"Seniority"
+
   }
 }
