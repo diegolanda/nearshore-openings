@@ -1,4 +1,18 @@
 {
+  "header": {
+    "logo": "Nearshore <Code/> Careers",
+    "hiring": "Hiring",
+    "interviewing": "Interviewing",
+    "benefits": "Benefits",
+    "opening": "Opening"
+    
+  },
+    
+  "home": {
+    "title": "{ 100 Engineers }",
+    "short_description": "Join us ",
+    "description": ""
+  },
   "hiring": {
     "title": "HIRING PROCESS",
     "short_description": "Let's keep it short and simple",
@@ -43,16 +57,22 @@
     "descriptionFirstPart": "Search over our",
     "descriptionSecondPart": "open positions!, have something else in mind? sends us an email at careers@nearshorecode.com"
   },
+  "footer":{
+    "reserved":"Nearshore Code © 2021 All Rights Reserved.",
+    "subscribe":"Subscribe",
+    "description":"Get the latest news and articles to your inbox every month.",
+    "Thanks":"Thanks for subscribing!"
+    
+  },
   "actions": {
     "seeOpenings": {
       "label": "See Openings"
     },
-    "signup": "Sign up",
-    "signin": "Sign in",
     "view": "View",
     "apply": "Apply",
     "close":"Close",
-    "search":"Search..."
+    "search":"Search...",
+    "email":"Your email"
   },
   "viewModal":{
     "dateCreated":"Date Created",
@@ -60,6 +80,6 @@
     "jobDescription":"Job Description",
     "mainSkill":"Main Skill",
     "seniority":"Seniority"
-
   }
+
 }

@@ -7,6 +7,7 @@ import FeaturesInterviewing from '../partials/FeaturesInterviewing'
 import FeaturesOpenings from '../partials/FeaturesOpenings'
 import FeaturesBlocks from '../partials/FeaturesBlocks'
 import Footer from '../partials/Footer'
+import { Element } from 'react-scroll'
 
 function Home() {
   return (
@@ -17,11 +18,22 @@ function Home() {
       {/*  Page content */}
       <main className="flex-grow">
         {/*  Page sections */}
+       
+        <Element name="home">
         <HeroHome />
-        <FeaturesHiring />
-        <FeaturesInterviewing />
-        <FeaturesBlocks />
-        <FeaturesOpenings />
+        </Element>
+        <Element name="hiring">
+          <FeaturesHiring />
+        </Element>
+        <Element name="interviewing">
+          <FeaturesInterviewing />
+        </Element>
+        <Element name="benefits">
+          <FeaturesBlocks />
+        </Element>
+        <Element name="opening">
+          <FeaturesOpenings />
+        </Element>
       </main>
 
       {/*  Site footer */}
