@@ -9,9 +9,8 @@ const URL = 'https://internal-api.unosquare.com/elp/public/career'
 function Features() {
   const { t } = useTranslation()
 
-  const [tab, setTab] = useState(1)
+  const [tab] = useState(1)
   const [oportunities, setOpportunities] = useState([])
-  const [filteredOportunities, setFilteredOportunities] = useState([])
   const [search, setSearch] = useState('')
   const [total, setTotal] = useState(0)
 
@@ -116,7 +115,7 @@ function Features() {
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <div className="relative flex flex-col mx-auto grid gap-4 lg:grid-cols-3 m-1.5 ">
+          <div className="relative flex-col mx-auto grid gap-4 lg:grid-cols-3 m-1.5 ">
             {oportunities.length && careerOpportunities}
           </div>
         </div>

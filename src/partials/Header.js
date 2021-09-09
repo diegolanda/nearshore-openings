@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 
-const MenuItems = ['hiring', 'interviewing', 'benefits', 'opening']
+const MenuItems = ['hiring', 'interviewing', 'benefits', 'openings']
 
 function Header() {
   const { t } = useTranslation()
@@ -32,7 +32,7 @@ function Header() {
             {/* Logo */}
             <Link
               to="home"
-              className="max-w-6xl mx-auto px-1 sm:px-1 text-green-500 font-black"
+              className=" cursor-pointer max-w-6xl mx-auto px-1 sm:px-1 text-green-500 font-black"
             >
               {t('header.logo')}
             </Link>
