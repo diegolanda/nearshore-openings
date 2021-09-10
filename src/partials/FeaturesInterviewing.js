@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 function Features() {
   const { t } = useTranslation()
 
-  const [tab, setTab] = useState(1)
+  const [tab] = useState(1)
 
   const tabs = useRef(null)
 

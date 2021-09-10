@@ -31,7 +31,7 @@ function Home() {
         <Element name="benefits">
           <FeaturesBlocks />
         </Element>
-        <Element name="opening">
+        <Element name="openings">
           <FeaturesOpenings />
         </Element>
       </main>
