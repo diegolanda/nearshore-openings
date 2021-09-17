@@ -18,7 +18,7 @@ const CustomModal = ({ showModal, handleModal, data }) => {
                   </h3>
                 </div>
                 {/*body*/}
-                <div className="relative p-5 flex-auto text-green-500">
+                <div className="relative p-5 flex-auto">
                   <p className="my-0 text-blueGray-500 text-lg leading-relaxed text-justify">
                     <div>
                       <strong>- {t('viewModal.dateCreated')}: </strong>
