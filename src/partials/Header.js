@@ -9,6 +9,7 @@ function Header() {
 
   const [top, setTop] = useState(true)
   const [active, setActive] = useState('home')
+  const [hidden, setHidden] = useState(true)
 
   // detect whether user has scrolled the page down by 10px
   useEffect(() => {
@@ -20,44 +21,50 @@ function Header() {
   }, [top])
 
   return (
-    <header
-      className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
+    <nav
+      className={`mx-auto mt-s fixed w-full z-30 flex items-center justify-between flex-wrap p-6 ${
         !top && 'bg-white blur shadow-lg'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-5 sm:px-6">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Site branding */}
-          <div className="flex-shrink-0 mr-4">
-            {/* Logo */}
+      <div className="flex-grow items-center flex-shrink-0 ">
+        <Link
+          to="home"
+          className="cursor-pointer max-w-6xl mx-auto px-1 sm:px-1 text-green-500 font-black"
+        >
+          {t('header.logo')}
+        </Link>
+      </div>
+      <div className="block lg:hidden">
+        <button
+          className="flex items-center px-4  py-2 border rounded mr-4 border-green-500  hover:border-green-900 text-green-600 hover:text-green-900"
+          onClick={() => setHidden(!hidden)}
+        >
+          <svg
+            className="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div className={`w-full lg:flex lg:w-auto  font-bold text-right ${hidden && 'hidden'}`}>
+        <div>
+          {MenuItems.map((item) => (
             <Link
-              to="home"
-              className=" cursor-pointer max-w-6xl mx-auto px-1 sm:px-1 text-green-500 font-black"
+              to={item}
+              onClick={() => setActive(item)}
+              className={`lg:mx-5 block mt-0 lg:inline-block lg:mt-0 text-green-600 hover:text-green-900 mr-4 cursor-pointer ${
+                active === item && 'lg:border-b-4 lg:border-green-500'
+              }`}
             >
-              {t('header.logo')}
+              {t(`header.${item}`)}
             </Link>
-          </div>
-          {/* Site navigation */}
-          <nav className="flex flex-grow">
-            <ul className="flex flex-grow justify-end flex-wrap items-center">
-              {MenuItems.map((item) => (
-                <li
-                  className={`cursor-pointer ${active === item && 'border-b-4 border-green-500'}`}
-                >
-                  <Link
-                    to={item}
-                    onClick={() => setActive(item)}
-                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                  >
-                    {t(`header.${item}`)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          ))}
         </div>
       </div>
-    </header>
+    </nav>
   )
 }
 
