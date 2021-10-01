@@ -18,7 +18,7 @@ const CustomModal = ({ showModal, handleModal, data }) => {
                   </h3>
                 </div>
                 {/*body*/}
-                <div className="relative p-5 flex-auto text-green-500">
+                <div className="relative p-5 flex-auto text-blueGray-500">
                   <p className="my-0 text-blueGray-500 text-lg leading-relaxed text-justify">
                     <div>
                       <strong>- {t('viewModal.dateCreated')}: </strong>
@@ -45,7 +45,7 @@ const CustomModal = ({ showModal, handleModal, data }) => {
                 {/*footer*/}
                 <div className="flex items-center justify-end p-3 border-t border-solid border-blueGray-500 rounded-b">
                   <button
-                    class="bg-green-500 hover:bg-green-700 text-white font-normal m-1.5 py-1 px-4 rounded-full"
+                    className="bg-green-500 hover:bg-green-700 text-white font-normal m-1.5 py-1 px-4 rounded-full"
                     onClick={() =>
                       (window.location = `mailto:careers@nearshorecode.com?subject=${data.CareerOpportunityId} - ${data.JobTitle}`)
                     }

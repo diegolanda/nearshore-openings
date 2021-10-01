@@ -45,7 +45,7 @@ function Features() {
                 <h1 className="lg:text-5xl md:text-4xl sm:text-3xl font-bold mb-4 leading-none">
                   {t('interviewing.short_description')}
                 </h1>
-                <p className="text-xl md:text-lg sm:text-base text-gray-600 text-justify ">
+                <p className="text-xl text-gray-600 text-justify ">
                   {t('interviewing.description')}
                 </p>
               </div>

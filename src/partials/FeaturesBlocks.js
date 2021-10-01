@@ -14,14 +14,14 @@ function FeaturesBlocks() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h3 className="lg:text-3xl md:text-2xl sm:text-xl font-bold text mb-3 text-green-500">{t('benefits.title')}</h3> 
+            <h3 className="lg:text-3xl md:text-2xl sm:text-xl sm:pt-10 font-bold text mb-3 text-green-500">{t('benefits.title')}</h3> 
             </div>
           {/* Items */}
           <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
             {/* 1st item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded-xl h-72">
               <img
-                class="w-40 h-40 md:rou rounded-full mx-auto"
+                className="w-40 h-40 md:rou rounded-full mx-auto"
                 src={require('../imagesSvg/payment.svg').default}
                 alt=""
                 width="384"
@@ -38,7 +38,7 @@ function FeaturesBlocks() {
             {/* 2nd item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded-xl h-72">
               <img
-                class="w-40 h-40 md:rou rounded-full mx-auto"
+                className="w-40 h-40 md:rou rounded-full mx-auto"
                 src={require('../imagesSvg/remote.svg').default}
                 alt=""
                 width="384"
@@ -55,7 +55,7 @@ function FeaturesBlocks() {
             {/* 3rd item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded-xl h-72 ">
               <img
-                class="w-40 h-40 md:rou rounded-full mx-auto"
+                className="w-40 h-40 md:rou rounded-full mx-auto"
                 src={require('../imagesSvg/learning.svg').default}
                 alt=""
                 width="384"
@@ -72,7 +72,7 @@ function FeaturesBlocks() {
             {/* 4th item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded-xl h-72">
               <img
-                class="w-40 h-40 md:rou rounded-full mx-auto"
+                className="w-40 h-40 md:rou rounded-full mx-auto"
                 src={require('../imagesSvg/medical.svg').default}
                 alt=""
                 width="384"
@@ -89,7 +89,7 @@ function FeaturesBlocks() {
             {/* 5th item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded-xl h-72">
               <img
-                class="w-40 h-40 md:rou rounded-full mx-auto"
+                className="w-40 h-40 md:rou rounded-full mx-auto"
                 src={require('../imagesSvg/meditation.svg').default}
                 alt=""
                 width="500"
@@ -106,7 +106,7 @@ function FeaturesBlocks() {
             {/* 6th item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded-xl h-72">
               <img
-                class="w-40 h-40 md:rou rounded-full mx-auto"
+                className="w-40 h-40 md:rou rounded-full mx-auto"
                 src={require('../imagesSvg/travel.svg').default}
                 alt=""
                 width="384"

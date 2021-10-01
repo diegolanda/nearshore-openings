@@ -40,7 +40,7 @@ function Features() {
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
                 <h3 className="lg:text-3xl md:text-2xl sm:text-xl font-bold text mb-3 text-green-500 pt-0">{t('hiring.title')}</h3>
                 <h1 className="lg:text-5xl md:text-4xl sm:text-3xl font-bold mb-4 leading-none">{t('hiring.short_description')}</h1>
-                <p className="text-xl md:text-lg sm:text-base text-gray-600 text-justify">
+                <p className="text-xl text-gray-600 text-justify">
                   {t('hiring.description')}
                 </p>
               </div>

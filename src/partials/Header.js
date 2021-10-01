@@ -29,6 +29,7 @@ function Header() {
       <div className="flex-grow items-center flex-shrink-0 ">
         <Link
           to="home"
+          onClick={() => setHidden(true)}
           className="cursor-pointer max-w-6xl mx-auto px-1 sm:px-1 text-green-500 font-black"
         >
           {t('header.logo')}
@@ -49,12 +50,20 @@ function Header() {
           </svg>
         </button>
       </div>
-      <div className={`w-full lg:flex lg:w-auto  font-bold text-right ${hidden && 'hidden'}`}>
+      <div
+        className={`w-full lg:flex lg:w-auto  font-bold text-right ${
+          hidden && 'hidden'
+        }`}
+      >
         <div>
-          {MenuItems.map((item) => (
+          {MenuItems.map((item, key) => (
             <Link
               to={item}
-              onClick={() => setActive(item)}
+              key={key}
+              onClick={() => {
+                setActive(item)
+                setHidden(true)
+              }}
               className={`lg:mx-5 block mt-0 lg:inline-block lg:mt-0 text-green-600 hover:text-green-900 mr-4 cursor-pointer ${
                 active === item && 'lg:border-b-4 lg:border-green-500'
               }`}

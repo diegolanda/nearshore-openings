@@ -43,8 +43,8 @@ function Features() {
     })
   }
 
-  const careerOpportunities = filter.map((oportunity) => (
-    <CareerOppornutity data={oportunity} />
+  const careerOpportunities = filter.map((oportunity, key) => (
+    <CareerOppornutity key={key} data={oportunity} />
   ))
 
   return (
@@ -67,8 +67,10 @@ function Features() {
                 <h3 className="lg:text-3xl md:text-2xl sm:text-xl pt-0 font-bold text mb-3 text-green-500">
                   {t('openings.title')}
                 </h3>
-                <h1 className="lg:text-5xl md:text-3xl sm:text-3xl font-bold mb-4 leading-none">{t('openings.short_description')}</h1>
-                <p className="text-xl md:text-lg sm:text-base text-gray-600">{`${t(
+                <h1 className="lg:text-5xl md:text-3xl sm:text-3xl font-bold mb-4 leading-none">
+                  {t('openings.short_description')}
+                </h1>
+                <p className="text-xl text-gray-600">{`${t(
                   'openings.descriptionFirstPart',
                 )} ${total} ${t('openings.descriptionSecondPart')}`}</p>
               </div>
@@ -92,21 +94,20 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                    <img
-                      className="md:flex lg:pt-0 md:pt-10 mx-auto rounded"
-                      src={require('../imagesSvg/openings.svg').default}
-                      width="500"
-                      height="462"
-                      alt="Features bg"
-                    />
-                  
+                  <img
+                    className="md:flex lg:pt-0 md:pt-10 mx-auto rounded"
+                    src={require('../imagesSvg/openings.svg').default}
+                    width="500"
+                    height="462"
+                    alt="Features bg"
+                  />
                 </Transition>
               </div>
             </div>
           </div>
           <div>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               value={search}
               placeholder={t('actions.search')}
               onChange={(e) => setSearch(e.target.value)}
