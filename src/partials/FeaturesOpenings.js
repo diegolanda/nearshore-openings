@@ -43,8 +43,8 @@ function Features() {
     })
   }
 
-  const careerOpportunities = filter.map((oportunity) => (
-    <CareerOppornutity data={oportunity} />
+  const careerOpportunities = filter.map((oportunity, key) => (
+    <CareerOppornutity key={key} data={oportunity} />
   ))
 
   return (
@@ -54,10 +54,8 @@ function Features() {
         className="absolute inset-0 bg-gray-100 pointer-events-none mb-16"
         aria-hidden="true"
       ></div>
-      <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div>
-
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-12 md:pt-20">
+        <div className="lg:pt-24 md:pt-24 sm:pt-24">
           {/* Section content */}
           <div className="md:grid md:grid-cols-12 md:gap-">
             {/* Content */}
@@ -66,10 +64,12 @@ function Features() {
               data-aos="fade-right"
             >
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3 text-green-500">
+                <h3 className="lg:text-3xl md:text-2xl sm:text-xl pt-0 font-bold text mb-3 text-green-500">
                   {t('openings.title')}
                 </h3>
-                <h1 className="h1 mb-6 ">{t('openings.short_description')}</h1>
+                <h1 className="lg:text-5xl md:text-3xl sm:text-3xl font-bold mb-4 leading-none">
+                  {t('openings.short_description')}
+                </h1>
                 <p className="text-xl text-gray-600">{`${t(
                   'openings.descriptionFirstPart',
                 )} ${total} ${t('openings.descriptionSecondPart')}`}</p>
@@ -78,7 +78,7 @@ function Features() {
 
             {/* Tabs items */}
             <div
-              className="max-w-xl md:max-w-none  md:w-full mx-auto md:col-span-7 lg:col-span-6 mb-8 md:mb-0 md:order-1"
+              className="max-w-xl md:max-w-none  md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1"
               data-aos="zoom-y-out"
               ref={tabs}
             >
@@ -94,22 +94,20 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                  <div className="relative inline-flex flex-col">
-                    <img
-                      className="md:max-w-none mx-auto rounded"
-                      src={require('../imagesSvg/openings.svg').default}
-                      width="500"
-                      height="462"
-                      alt="Features bg"
-                    />
-                  </div>
+                  <img
+                    className="md:flex lg:pt-0 md:pt-10 mx-auto rounded"
+                    src={require('../imagesSvg/openings.svg').default}
+                    width="500"
+                    height="462"
+                    alt="Features bg"
+                  />
                 </Transition>
               </div>
             </div>
           </div>
           <div>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               value={search}
               placeholder={t('actions.search')}
               onChange={(e) => setSearch(e.target.value)}

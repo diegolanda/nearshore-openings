@@ -17,13 +17,13 @@ const CareerOppornutity = ({ data }) => {
       <h4 className="text-xp pb-1.5">{data.Seniority}</h4>
 
       <button
-        class="bg-green-500 hover:bg-green-700 text-white font-normal m-1.5 py-1 px-4 rounded-full"
+        className="bg-green-500 hover:bg-green-700 text-white font-normal m-1.5 py-1 px-4 rounded-full"
         onClick={() => handleModal(true)}
       >
         {t('actions.view')}
       </button>
       <button
-        class="bg-gray-500 hover:bg-gray-700 text-white font-normal m-1.5 py-1 px-4 rounded-full"
+        className="bg-gray-500 hover:bg-gray-700 text-white font-normal m-1.5 py-1 px-4 rounded-full"
         onClick={() =>
           (window.location = `mailto:careers@nearshorecode.com?subject=${data.CareerOpportunityId} - ${data.JobTitle}`)
         }
