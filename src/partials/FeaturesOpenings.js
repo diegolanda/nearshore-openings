@@ -36,6 +36,7 @@ function Features() {
   if (search.length > 0) {
     filter = oportunities.filter((item) => {
       return (
+        item.CareerOpportunityId.toString().toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
         item.MainSkill.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
         item.Seniority.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
         item.JobTitle.toLowerCase().indexOf(search.toLowerCase()) !== -1

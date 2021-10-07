@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import dayjs from "dayjs";
 
 const CustomModal = ({ showModal, handleModal, data }) => {
   const { t } = useTranslation()
@@ -22,7 +23,7 @@ const CustomModal = ({ showModal, handleModal, data }) => {
                   <p className="my-0 text-blueGray-500 text-lg leading-relaxed text-justify">
                     <div>
                       <strong>- {t('viewModal.dateCreated')}: </strong>
-                      {data.DateCreated}
+                      {dayjs(data.DateCreated).format("MMMM DD, YY") }
                     </div>
                     <div>
                       <strong>- {t('viewModal.desiredCriteria')}: </strong>
@@ -69,5 +70,6 @@ const CustomModal = ({ showModal, handleModal, data }) => {
     </>
   )
 }
+ 
 
 export default CustomModal
