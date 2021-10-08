@@ -4,7 +4,7 @@ import InputField from './ui/InputField'
 import { useTranslation } from 'react-i18next'
 
 const CustomForm = ({ status, message, onValidated }) => {
-  const { modalOpen, setModalOpen } = useGHStContext()
+  const { modalOpen} = useGHStContext()
   const [email, setEmail] = useState('')
   const { t } = useTranslation()
   const handleSubmit = (e) => {
@@ -42,7 +42,7 @@ const CustomForm = ({ status, message, onValidated }) => {
       )}
 
       {status !== 'success' ? (
-        <div class="flex">
+        <div className="flex">
           <InputField
             onChangeHandler={setEmail}
             type="email"

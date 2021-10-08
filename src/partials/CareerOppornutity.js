@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import CustomModal from '../components/Modal'
 
-const CareerOppornutity = ({ data }) => {
-  const [showModal, setShowModal] = useState(false)
+const CareerOppornutity = ({ data, modal = false }) => {
+  const [showModal, setShowModal] = useState(modal)
 
   const handleModal = (value) => {
     setShowModal(value)

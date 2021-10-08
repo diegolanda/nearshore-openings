@@ -23,7 +23,7 @@ const CustomModal = ({ showModal, handleModal, data }) => {
                   <p className="my-0 text-blueGray-500 text-lg leading-relaxed text-justify">
                     <div>
                       <strong>- {t('viewModal.dateCreated')}: </strong>
-                      {dayjs(data.DateCreated).format("MMMM DD, YY") }
+                      {dayjs(data.DateCreated).format("MMMM DD, YYYY") }
                     </div>
                     <div>
                       <strong>- {t('viewModal.desiredCriteria')}: </strong>
