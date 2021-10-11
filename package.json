@@ -11,6 +11,7 @@
     "aos": "^3.0.0-beta.6",
     "axios": "^0.21.1",
     "cruip-js-toolkit": "^1.0.3",
+    "dayjs": "^1.10.7",
     "i18next": "^20.4.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.2",

@@ -3,15 +3,15 @@ import Transition from '../utils/Transition.js'
 import { useTranslation } from 'react-i18next'
 import CareerOppornutity from './CareerOppornutity'
 import axios from 'axios'
+import { Element } from 'react-scroll'
 
 const URL = 'https://internal-api.unosquare.com/elp/public/career'
 
-function Features() {
+function Features({ search, onChange }) {
   const { t } = useTranslation()
 
   const [tab] = useState(1)
   const [oportunities, setOpportunities] = useState([])
-  const [search, setSearch] = useState('')
   const [total, setTotal] = useState(0)
 
   const tabs = useRef(null)
@@ -36,6 +36,7 @@ function Features() {
   if (search.length > 0) {
     filter = oportunities.filter((item) => {
       return (
+        item.CareerOpportunityId.toString().toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
         item.MainSkill.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
         item.Seniority.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
         item.JobTitle.toLowerCase().indexOf(search.toLowerCase()) !== -1
@@ -43,9 +44,16 @@ function Features() {
     })
   }
 
-  const careerOpportunities = filter.map((oportunity, key) => (
-    <CareerOppornutity key={key} data={oportunity} />
-  ))
+  const careerOpportunities =
+    filter.length === 1 ?(
+      <CareerOppornutity key={1} data={filter[0]} modal={true} />
+    ) : filter.length > 1 ? (
+      filter.map((oportunity, key) => (
+        <CareerOppornutity key={key} data={oportunity} />
+      ))
+    ) : (
+      []
+    )
 
   return (
     <section className="relative">
@@ -106,12 +114,14 @@ function Features() {
             </div>
           </div>
           <div>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              value={search}
-              placeholder={t('actions.search')}
-              onChange={(e) => setSearch(e.target.value)}
-            />
+            <Element name="search-openings">
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                value={search}
+                placeholder={t('actions.search')}
+                onChange={onChange}
+              />
+            </Element>
           </div>
           <div className="relative flex-col mx-auto grid gap-4 lg:grid-cols-3 m-1.5 ">
             {oportunities.length && careerOpportunities}
