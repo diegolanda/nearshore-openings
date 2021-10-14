@@ -59,13 +59,13 @@ function Features({ search, onChange }) {
     <section className="relative">
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div
-        className="absolute inset-0 bg-gray-100 pointer-events-none mb-16"
+        className="absolute inset-0 bg-gray-100 pointer-events-none mb-0"
         aria-hidden="true"
       ></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="lg:pt-24 md:pt-24 sm:pt-24">
           {/* Section content */}
-          <div className="md:grid md:grid-cols-12 md:gap-">
+          <div className="md:grid md:grid-cols-12 md:gap-6">
             {/* Content */}
             <div
               className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
